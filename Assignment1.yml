@@ -1,5 +1,5 @@
 ---
-- hosts: client1
+- hosts: Client1
   become: true
   tasks:
     - name: Update apt package manager repositories cache
@@ -9,7 +9,7 @@
       apt:
         name: java-1.7.0-openjdk.x86_64
         state: present
-- hosts: client2
+- hosts: Client2
   become: true
   tasks:
     - name: Update the software package repository
