@@ -20,7 +20,6 @@
         name:
           - mysql-server
           - mysql-client
-          - python-mysqldb
         state: latest
  
        
