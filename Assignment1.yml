@@ -7,7 +7,7 @@
         update_cache: yes
     - name: Install Java using Ansible
       apt:
-        name: java-1.7.0-openjdk.x86_64
+        name: openjdk-11-jdk
         state: present
 - hosts: Client2
   become: true
