@@ -1,0 +1,25 @@
+---
+- hosts: client1
+  become: true
+  tasks:
+    - name: Update apt package manager repositories cache
+      apt:
+        update_cache: yes
+    - name: Install Java using Ansible
+      apt:
+        name: java-1.7.0-openjdk.x86_64
+        state: present
+- hosts: client2
+  become: true
+  tasks:
+    - name: Update the software package repository
+      apt:
+        update_cache: yes
+    - name: Install MySQL
+      apt:
+        name: "{{ item }}"
+        state: latest
+        with_items:
+            - mysql-server
+            - mysql-client
+            - python-mysqldb
