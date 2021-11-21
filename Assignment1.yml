@@ -17,9 +17,10 @@
         update_cache: yes
     - name: Install MySQL
       apt:
-        name: "{{ item }}"
+        name:
+          - mysql-server
+          - mysql-client
+          - python-mysqldb
         state: latest
-      with_items:
-        - mysql-server
-        - mysql-client
-        - python-mysqldb
+ 
+       
