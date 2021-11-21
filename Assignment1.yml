@@ -20,6 +20,6 @@
         name: "{{ item }}"
         state: latest
         with_items:
-            - mysql-server
-            - mysql-client
-            - python-mysqldb
+          - mysql-server
+          - mysql-client
+          - python-mysqldb
