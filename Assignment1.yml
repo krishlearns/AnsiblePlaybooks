@@ -19,7 +19,7 @@
       apt:
         name: "{{ item }}"
         state: latest
-        with_items:
-          - mysql-server
-          - mysql-client
-          - python-mysqldb
+      with_items:
+        - mysql-server
+        - mysql-client
+        - python-mysqldb
