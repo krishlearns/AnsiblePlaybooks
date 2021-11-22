@@ -7,6 +7,15 @@
   apt:
     name: apache2
     state: latest
+- name: Copy index.html
+  copy:
+    src: index.html
+    dest: /var/www/html/index.html
+  notify: restart apache
+- name: Install Java
+  apt:
+    name: openjdk-11-jdk
+    state: present
 - name: Display message 
   debug:
-    msg: "Installed Apache Successfully"
+    msg: "Installed Apache  and Java Successfully"
