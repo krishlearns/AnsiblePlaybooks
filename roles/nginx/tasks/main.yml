@@ -1,0 +1,15 @@
+---
+# tasks file for ansible-new
+- name: update_cache
+  apt:
+    update_cache: yes
+- name: Install nginx
+  apt:
+    name: nginx
+    state: latest
+- name: copy new index.html file
+    copy:
+      name: index.html
+      dest: /usr/share/nginx/html/
+    notify: restart nginx
+    
