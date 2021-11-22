@@ -1,2 +1,8 @@
 ---
 # vars file for ansible-new
+- name: display post install message
+  debug:
+  msg:
+    - 'Installed nginx Successfully'
+    - 'Copied index.html file'
+    - 'restarted nginx'
