@@ -1,0 +1,6 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Running a script
+      script: test.sh
