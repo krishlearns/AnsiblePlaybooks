@@ -8,8 +8,7 @@
     name: nginx
     state: latest
 - name: copy new index.html file
-    copy:
-      name: index.html
-      dest: /usr/share/nginx/html/
-    notify: restart nginx
-    
+  copy:
+    name: index.html
+    dest: /usr/share/nginx/html/
+  notify: restart nginx
