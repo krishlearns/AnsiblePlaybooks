@@ -2,7 +2,6 @@
 - hosts: apache
   become: yes
   become_user: root
-  vars: 
   roles:
     - apache
 - hosts: nginx
