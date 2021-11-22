@@ -1,4 +1,4 @@
 ---
 - hosts: Client2
   roles:
-    - ansible_new
+    - nginx
