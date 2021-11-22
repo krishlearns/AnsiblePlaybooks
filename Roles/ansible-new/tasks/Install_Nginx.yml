@@ -1,0 +1,13 @@
+---
+# Install Apache on Client1
+- hosts: Client2
+  become: true
+  become_user: root
+  tasks:
+    - name: update_cache
+      apt:
+        update_cache: yes
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: latest
