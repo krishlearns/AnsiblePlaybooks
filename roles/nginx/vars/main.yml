@@ -1,5 +1,0 @@
----
-# vars file for ansible-new
-- name: display post install message
-  debug:
-  msg: "Installed nginx Successfully and Copied index.html file"

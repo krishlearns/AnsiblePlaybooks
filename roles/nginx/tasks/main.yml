@@ -9,3 +9,6 @@
     src: index.html
     dest: /usr/share/nginx/html/index.html
   notify: restart nginx
+- name: Display message 
+  debug:
+    msg: "Installed nginx Successfully"

@@ -7,3 +7,6 @@
   apt:
     name: apache2
     state: latest
+- name: Display message 
+  debug:
+    msg: "Installed Apache Successfully"
