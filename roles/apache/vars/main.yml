@@ -1,0 +1,8 @@
+---
+# vars file for apache
+- name: display post install message
+  debug:
+    msg:
+      - 'Installed Apache Successfully'
+      - 'Copied index.html file'
+      - 'restarted Apache'
