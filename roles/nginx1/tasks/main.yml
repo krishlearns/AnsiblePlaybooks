@@ -1,0 +1,24 @@
+---
+# tasks file for nginx1
+- name: update apt cache
+  apt:
+    update_cache: yes
+- name: Install nginx
+  apt:
+    name: nginx
+    state: latest
+- name: Create Directory
+  file:
+    path: /var/www/tutorial
+    state: directory
+- name: copy index.html file to tutorials directory
+  copy:
+    src: index.html
+    dest: /var/www/tutorial/index.html
+  notify: restart nginx
+- name: copy tutorial file to tutorials directory
+  copy:
+    src: tutorial
+    dest: /etc/nginx/sites-enabled/tutorial
+  notify: restart nginx
+  
